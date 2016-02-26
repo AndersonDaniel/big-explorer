@@ -1,0 +1,17 @@
+body {
+	background: rgb(153, 255, 204);
+}
+
+.file_container {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.file {
+	width: 200px;
+	height: 200px;
+	background: rgba(200, 200, 200, 0.5);
+	margin: 5px;
+	text-align: center;
+	flex-shrink: 0;
+}
