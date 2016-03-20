@@ -8,10 +8,48 @@ body {
 }
 
 .file {
-	width: 200px;
-	height: 200px;
+	width: 400px;
+	height: 400px;
 	background: rgba(200, 200, 200, 0.5);
 	margin: 5px;
 	text-align: center;
 	flex-shrink: 0;
+	font-family: "Tahoma";
+	font-size: 3.5em;
+	border-radius: 15px;
+	cursor: pointer;
+}
+
+	.file:hover {
+		background: rgba(250, 250, 250, 0.5);
+	}
+
+.icon {
+	width: 200px;
+	height: 200px;
+	margin: 10px auto 0 auto;
+}
+
+.doc {
+	background: url('icons/doc.jpg');
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+.txt {
+	background: url('icons/txt.jpg');
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+.jpg {
+	background: url('icons/jpg.jpg');
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+.new {
+	background: url('icons/new.jpg');
+	background-repeat: no-repeat;
+	background-size: 100%;
 }

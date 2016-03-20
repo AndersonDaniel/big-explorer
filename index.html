@@ -6,32 +6,17 @@
 		<link rel="stylesheet" href="index.css" />
 		<title>BIG EXPLORER</title>
 	</head>
+	<meta charset="utf-8">
 	<body ng-app="explorer" ng-controller="mainController as main">
 		<div class="file_container">
-			<div class="file" ng-repeat="bla in main.data">
-				<p>{{bla}}</p>
+			<div class="file" ng-repeat="file in main.data" ng-click='main.open(file)'>
+				<div class="icon" ng-class="file.type"></div>
+				<p>{{file.name}}</p>
 			</div>
-			<div class="file"><p>111</p></div>
-			<div class="file"><p>222</p></div>
-			<div class="file"><p>333</p></div>
-			<div class="file"><p>444</p></div>
-			<div class="file"><p>444</p></div>
-			<div class="file"><p>444</p></div>
-			<div class="file"><p>444</p></div>
-			<div class="file"><p>111</p></div>
-			<div class="file"><p>222</p></div>
-			<div class="file"><p>333</p></div>
-			<div class="file"><p>444</p></div>
-			<div class="file"><p>444</p></div>
-			<div class="file"><p>444</p></div>
-			<div class="file"><p>444</p></div>
-			<div class="file"><p>111</p></div>
-			<div class="file"><p>222</p></div>
-			<div class="file"><p>333</p></div>
-			<div class="file"><p>444</p></div>
-			<div class="file"><p>444</p></div>
-			<div class="file"><p>444</p></div>
-			<div class="file"><p>444</p></div>
+			<div class="file" ng-click='main.newfile()'>
+				<div class="icon new"></div>
+				<p>צור קובץ חדש</p>
+			</div>
 		</div>
 	</body>
 </html>
