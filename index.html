@@ -18,5 +18,30 @@
 				<p>צור קובץ חדש</p>
 			</div>
 		</div>
+		<div class="dialog" ng-show="main.creating">
+			<div>
+				<h1>יצירת קובץ חדש</h1>
+				<div class="input"><input type="text" placeholder="הכנס את שם הקובץ..." ng-model="main.newFile.name" /></div>
+				<p>בחר את סוג הקובץ:</p>
+				<div class="file_container">
+					<div class="file" ng-repeat="type in main.newFileTypes" ng-click="main.select(type.type)"
+						ng-class="(main.newFile.type == type.type) ? 'selected' : ''">
+						<div class="icon" ng-class="type.type"></div>
+						<p>{{type.name}}</p>
+					</div>
+				</div>
+				<div>
+					<div class="button-container">
+						<div id="cancel" ng-click="main.cancelNewFile()">
+							ביטול
+						</div>
+						<div id="confirm" ng-class="(main.newFile.name && main.newFile.type) ? '' : 'disabled'"
+							ng-click="main.createNewFile()">
+							אישור
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</body>
 </html>

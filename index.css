@@ -1,5 +1,6 @@
 body {
 	background: rgb(153, 255, 204);
+	font-family: "Tahoma";
 }
 
 .file_container {
@@ -14,7 +15,6 @@ body {
 	margin: 5px;
 	text-align: center;
 	flex-shrink: 0;
-	font-family: "Tahoma";
 	font-size: 3.5em;
 	border-radius: 15px;
 	cursor: pointer;
@@ -30,26 +30,123 @@ body {
 	margin: 10px auto 0 auto;
 }
 
-.doc {
-	background: url('icons/doc.jpg');
+.docx {
+	background: url('icons/doc.png');
 	background-repeat: no-repeat;
 	background-size: 100%;
 }
 
 .txt {
-	background: url('icons/txt.jpg');
+	background: url('icons/txt.png');
 	background-repeat: no-repeat;
 	background-size: 100%;
 }
 
 .jpg {
-	background: url('icons/jpg.jpg');
+	background: url('icons/jpg.png');
 	background-repeat: no-repeat;
 	background-size: 100%;
 }
 
 .new {
-	background: url('icons/new.jpg');
+	background: url('icons/new.png');
 	background-repeat: no-repeat;
 	background-size: 100%;
+}
+
+.dialog {
+	position: absolute;
+	bottom: 0;
+	top: 0;
+	right: 0;
+	left: 0;
+	background: rgba(150, 150, 150, 0.5);
+	padding: 0;
+}
+
+.dialog > div {
+	width: 95%;
+	height: 100%;
+	margin: -30px auto;
+	background: #e6e6ff;
+	border-radius: 50px;
+	border-width: 0;
+}
+
+.dialog > div h1 {
+	margin: 30px;
+	font-size: 3em;
+	text-align: center;
+}
+
+.dialog > div .input {
+	width: 90%;
+	margin: 0 auto;
+}
+
+.input input {
+	width: 100%;
+	font-size: 3em;
+	border-radius: 20px;
+	outline: none;
+	padding: 5px;
+	font-family: Tahoma;
+}
+
+.dialog > div p {
+	font-size: 2.5em; 
+	margin: 10px;
+}
+
+.dialog *.file {
+	font-size: 1em;
+	width: 300px;
+	height: 300px;
+	border: 1px solid transparent;
+}
+
+.button-container {
+	margin: 0 auto;
+	position: absolute;
+	bottom: 30px;
+	left: 100px;
+}
+
+.button-container > div {
+	padding: 15px;
+	border-radius: 10px;
+	margin: 10px;
+	cursor: pointer;
+	font-size: 2.5em;
+	text-align: center;
+	display: inline-block;
+}
+
+#confirm {
+	background: #66ff99;
+}
+
+#confirm:hover {
+	background: #b9ffcf;
+}
+
+#confirm.disabled {
+	background: lightgray;
+	cursor: default;
+}
+
+#confirm:hover.disabled {
+	background: lightgray;
+}
+
+#cancel {
+	background: #ff5050;
+}
+
+#cancel:hover {
+	background: #ffa6a6;
+}
+
+.dialog *.file.selected {
+	border: 1px solid blue;
 }
